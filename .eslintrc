@@ -1,0 +1,26 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 9,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue"
+    ],
+    "extends": [
+        "plugin:vue/base"
+    ],
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "comma-dangle": ["error", "always-multiline"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "object-curly-spacing": ["error", "always"],
+        "block-spacing": ["error", "always"],
+        "func-call-spacing": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "keyword-spacing": ["error", { "after": true }],
+        "switch-colon-spacing": ["error", { "after": true, "before": false }],
+        "semi-spacing": ["error", { "before": false, "after": true }],
+        "semi": ["error", "always"],
+        "quotes": ["error", "single", { "avoidEscape": true }]
+    }
+}
