@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const SvgStorePlugin = require('webpack-svgstore-plugin');
 
 const config = {
     entry: './src/index.js',
@@ -47,6 +48,15 @@ const config = {
 
     plugins: [
         new VueLoaderPlugin(),
+        new SvgStorePlugin({
+            svgoOptions: {
+                plugins: [
+                    { removeUselessStrokeAndFill: true },
+                    { removeTitle: true },
+                ],
+            },
+            prefix: '',
+        }),
     ],
 };
 
