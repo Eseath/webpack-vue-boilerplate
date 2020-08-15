@@ -27,6 +27,10 @@ const config = {
                 loader: 'babel-loader',
             },
             {
+                test: /\.ts$/,
+                loader: 'ts-loader',
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     'vue-style-loader',
@@ -42,7 +46,7 @@ const config = {
             components: resolve(__dirname, 'src/components/'),
             views: resolve(__dirname, 'src/views/'),
         },
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.ts', '.js', '.vue', '.json'],
     },
 
     plugins: [
